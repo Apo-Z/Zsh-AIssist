@@ -24,7 +24,7 @@ ai_suggest_widget() {
     if [[ "${buffer}" == *"${CONTEXT_KEYWORD}"* ]]; then
         local cmd_part="${buffer%%${CONTEXT_KEYWORD}*}"
         local context="${buffer#*${CONTEXT_KEYWORD}}"
-        prompt="Complete or improve this shell command: '${cmd_part}'. Context: ${context}"
+        prompt="Complete this shell command: '${cmd_part}'. Context: ${context}"
     else
         prompt="Suggest a shell command for: ${buffer}"
     fi
